@@ -72,7 +72,7 @@ animate = '/assets/animate.css'
 font_awesome_url = 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
 app = dash.Dash(__name__, external_stylesheets=[custom, dbc.themes.SOLAR, animate, font_awesome_url])
 
-server = app.server
+# server = app.server
 app.config.suppress_callback_exceptions=True
 
 
