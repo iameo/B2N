@@ -30,6 +30,7 @@ from dotenv import load_dotenv   #for python-dotenv method
 load_dotenv()   
 
 
+
 filterHMs_ = [
     'Erica #BBNaija', 'Kiddwaya #BBNaija', 'Neo #BBNaija', 'Vee #BBNaija', 'Brighto #BBNaija',
     'Eric #BBNaija', 'Praise #BBNaija', 'Prince #BBNaija', 'Nengi #BBNaija', 'Laycon #BBNaija',
@@ -51,7 +52,7 @@ CUSTOMER_SECRET=os.environ.get('TWITTER_CONSUMER_SECRET')
 ACCESS_TOKEN=os.environ.get('TWITTER_ACCESS_TOKEN_KEY')
 ACCESS_SECRET=os.environ.get('TWITTER_ACCESS_TOKEN_SECRET')
 
-print(CUSTOMER_KEY, CUSTOMER_SECRET)
+# print(CUSTOMER_KEY, CUSTOMER_SECRET)
 # isolation lever disables automatic transactions,
 # we are disabling thread check as we are creating connection here, but we'll be inserting from a separate thread (no need for serialization)
 conn = sqlite3.connect('bbntwitterxy.db', isolation_level=None, check_same_thread=False)
@@ -169,7 +170,7 @@ class CustomListener(StreamListener):
                         # print("================")
                     with self.lock:
                         self.data.append((time_ms, tweet, place, sentiment))
-                        print(self.data)
+                        # print(self.data)
                     #print(time_ms, tweet, sentiment)
 
                     # append to data list (to be saved every 1 second)
