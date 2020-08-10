@@ -72,7 +72,7 @@ animate = '/assets/animate.css'
 font_awesome_url = 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
 app = dash.Dash(__name__, external_stylesheets=[custom, dbc.themes.SOLAR, animate, font_awesome_url])
 
-# server = app.server
+server = app.server
 app.config.suppress_callback_exceptions=True
 
 
@@ -891,4 +891,7 @@ def update_map(input, n):
 # for js in external_js:
 #     app.scripts.append_script({'external_url': js})
 
-dev_server = app.run_server
+# dev_server = app.run_server
+
+if __name__ == '__main__':
+    app.run_server(debug=False)
