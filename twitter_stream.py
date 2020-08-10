@@ -26,9 +26,8 @@ import string
 import pickle
 import itertools
 from textblob import TextBlob
-from dotenv import load_dotenv   #for python-dotenv method
-load_dotenv()   
-
+from dotenv import load_dotenv, find_dotenv  #for python-dotenv method
+load_dotenv(find_dotenv())   
 
 
 filterHMs_ = [
@@ -47,10 +46,10 @@ filterHMs = [
 analyzer = SentimentIntensityAnalyzer()
 
 
-CUSTOMER_KEY=os.environ.get('TWITTER_CONSUMER_KEY')
-CUSTOMER_SECRET=os.environ.get('TWITTER_CONSUMER_SECRET')
-ACCESS_TOKEN=os.environ.get('TWITTER_ACCESS_TOKEN_KEY')
-ACCESS_SECRET=os.environ.get('TWITTER_ACCESS_TOKEN_SECRET')
+CUSTOMER_KEY=os.getenv('TWITTER_CONSUMER_KEY')
+CUSTOMER_SECRET=os.getenv('TWITTER_CONSUMER_SECRET')
+ACCESS_TOKEN=os.getenv('TWITTER_ACCESS_TOKEN_KEY')
+ACCESS_SECRET=os.getenv('TWITTER_ACCESS_TOKEN_SECRET')
 
 # print(CUSTOMER_KEY, CUSTOMER_SECRET)
 # isolation lever disables automatic transactions,
