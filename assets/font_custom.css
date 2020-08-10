@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Scope+One|Trocchi");
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+
+
+html {
+    font-family: 'Itim', 'Source Sans Pro', serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 0.98em;
+    overflow-x: auto;
+}
+
+body {
+    font-family: 'Itim', 'Source Sans Pro', serif;
+    margin: 0;
+    overflow-x: auto;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.6em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+
+.xtcy-title {
+    font-family: 'Courier New', Courier, monospace !important;
+    text-align: center !important;
+    color: #0071a5 !important;
+    margin-top:5px !important;
+    text-shadow: 1px 1px 2px #0071a5;
+}
+
+h1.xtcy-title {
+    font-size: 100px !important;
+    /* background: red; */
+}
+
+.xtcy-slogan {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 17px;
+}
+
+.compare {
+    font-size: 18px;
+}
