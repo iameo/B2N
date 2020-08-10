@@ -19,7 +19,7 @@ stop_words = ['dey', 'awfar', 'wey', 'wan', 'shey', 'sabi', 'i', 'me', 'my', 'my
               "5","6","7","8","9","0","ca","nao","se","com","los","u","des","-",
               "--","'","''","la","como","con","segundo",'de', 'la', 'que', 'el',
               'en', 'y', 'a', 'los', 'del', 'se', 'las', 'por', 'un', 'para',
-              'con', 'no', 'una', 'su', 'al', 'lo', 'como', 'más', 'pero', 'sus',
+              'con', 'no', 'una', 'su', 'al', 'lo',
               'le', 'ya', 'o', "know","time","q","em", 'fent', 'kalamity', 'wine',
               "re","11","isnt","wan","ver","like","'re","m","'ve","bec","n","twt","kca","c","a",
               "b","d","e","f","g","h","i","j","k","l","m","n","o",
