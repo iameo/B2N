@@ -14,7 +14,7 @@ stop_words = ['dey', 'awfar', 'wey', 'wan', 'shey', 'sabi', 'i', 'me', 'my', 'my
               'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not',
               'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can',
               'will', 'just', 'don','should', 'now','https',"'s",'...', "whats'",
-              "rt","whats","n't","de","'m","un","en","``","dedic","twittermoments",
+              "rt","whats","n't","de","'m","un","en","dedic","twittermoments",
               "amp","e","y","o","ce","retweet","sur","na","el","1","2","3","4",
               "5","6","7","8","9","0","ca","nao","se","com","los","u","des","-",
               "--","'","''","la","como","con","segundo",'de', 'la', 'que', 'el',
