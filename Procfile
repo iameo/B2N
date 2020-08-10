@@ -1,2 +1,2 @@
-web: gunicorn main_app:server
+web: gunicorn dev_server:server
 clock: python twitter_stream.py

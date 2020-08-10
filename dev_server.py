@@ -1,6 +1,6 @@
 import os
 os.environ['dev'] = '1'
-from main_app import dev_server
+from main_app import server
 
 if __name__ == '__main__':
-    dev_server(debug=False)
+    server.run(debug=False)

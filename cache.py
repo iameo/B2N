@@ -69,7 +69,7 @@ class cache_memcached:
 
     def __init__(self):
         # in-memory memcached based cache
-        self.client = pymemcache.Client(['localhost:11211'])
+        self.client = pymemcache.Client(('localhost:11211'))
 
     # get cache element
     def get(self, pool, key):

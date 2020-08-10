@@ -51,7 +51,7 @@ CUSTOMER_SECRET=os.getenv('TWITTER_CONSUMER_SECRET')
 ACCESS_TOKEN=os.getenv('TWITTER_ACCESS_TOKEN_KEY')
 ACCESS_SECRET=os.getenv('TWITTER_ACCESS_TOKEN_SECRET')
 
-# print(CUSTOMER_KEY, CUSTOMER_SECRET)
+# print(ACCESS_TOKEN, ACCESS_SECRET)
 # isolation lever disables automatic transactions,
 # we are disabling thread check as we are creating connection here, but we'll be inserting from a separate thread (no need for serialization)
 conn = sqlite3.connect('bbntwitterq.db', isolation_level=None, check_same_thread=False)
@@ -112,10 +112,10 @@ class CustomListener(StreamListener):
                     one_day = 84600 * 1000
                     del_to = int(cur_time_ms - (KEEP_DATA * 1000))
                     sql = "DELETE FROM sentiment WHERE unix < '{}'".format(del_to)
-                    c.execute(sql)
+                    cursor.execute(sql)
                     time.sleep(5)
                     sql = 'VACCUM'
-                    c.execute(sql)
+                    cursor.execute(sql)
                     time.sleep(5)
                     db_cleanup(datetime.now(), msg="SUCCESS")
                 # else:
@@ -155,6 +155,9 @@ class CustomListener(StreamListener):
                         place = '<N/A>, Nigeria'
                     elif data["user"]["location"] == "Lagos":
                         place = 'Lagos, Nigeria'
+                    elif data["user"]["location"] == "Abuja":
+                        place = 'Abuja, Nigeria'
+                    
                     # elif 'Earth' in data["user"]["location"]:
                     #     place = 'Earth'
                     else:
@@ -242,8 +245,8 @@ while True:
     try:
         auth = OAuthHandler(CUSTOMER_KEY, CUSTOMER_SECRET)
         auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
-        twitterStream = Stream(auth, CustomListener(lock))
+        twitterStream = Stream(auth, CustomListener(lock), wait_on_rate_limit=True)
         twitterStream.filter(track=filterHMs_)
     except Exception as e:
         print(str(e))
-        time.sleep(5)
+        time.sleep(15)

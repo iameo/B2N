@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+
 import os
 import sys
 sys.path.insert(0, os.path.realpath(os.path.dirname(__file__)))
@@ -424,7 +425,7 @@ def generate_table(df, sentiment_term='', max_rows=3):
                                           }
                                   ) for i in df.values.tolist()
                           ]),
-                          html.P("Table for {}".format(sentiment_term)),
+                          html.P("Locations for people discussing {}".format(sentiment_term)),
                         ])
 
 
@@ -892,6 +893,6 @@ def update_map(input, n):
 #     app.scripts.append_script({'external_url': js})
 
 # dev_server = app.run_server
-
-if __name__ == '__main__':
-    app.run_server(debug=False)
+# os.environ['dev'] = '1'
+# if __name__ == '__main__':
+#     app.run_server(debug=False)
