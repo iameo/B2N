@@ -54,7 +54,7 @@ ACCESS_SECRET=os.getenv('TWITTER_ACCESS_TOKEN_SECRET')
 # print(CUSTOMER_KEY, CUSTOMER_SECRET)
 # isolation lever disables automatic transactions,
 # we are disabling thread check as we are creating connection here, but we'll be inserting from a separate thread (no need for serialization)
-conn = sqlite3.connect('bbntwitterxy.db', isolation_level=None, check_same_thread=False)
+conn = sqlite3.connect('bbntwitterq.db', isolation_level=None, check_same_thread=False)
 # connection = engine.raw_connection()
 cursor = conn.cursor()
 

@@ -32,7 +32,7 @@ import threading
 # cursor = connection.cursor()
 
 #serialization not needed
-conn = sqlite3.connect('bbntwitterxy.db', check_same_thread=False)
+conn = sqlite3.connect('bbntwitterq.db', check_same_thread=False)
 
 filterHMs_ = [
     'Erica #BBNaija', 'Kiddwaya #BBNaija', 'Neo #BBNaija', 'Vee #BBNaija', 'Brighto #BBNaija',
@@ -43,7 +43,7 @@ filterHMs_ = [
 
 punctuation = [str(i) for i in string.punctuation]
 
-st = ''
+# st = ''
 
 sentiment_colors = {-1:"#EE6055",
                     -0.5:"#FDE74C",
