@@ -18,3 +18,8 @@ This project tapped from SentDex' sentiment analysis web app and was referenced 
 - split terminal.
   command I: python twitter_stream.py (responsible for collecting live tweets; TWITTER API STREAMING)
   command II: python dev_server.py (to run app on server)
+
+
+
+### NB:
+I've decided to include the DBs with stored data so that could be used to fill up the web app on local server. Also, you can extract the tweets for other (NLP) projects.
