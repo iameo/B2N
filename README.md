@@ -1,5 +1,14 @@
 #2BN
 
+
+![ss1](https://github.com/iameo/B2N/blob/master/assets/ss/b2n_1.JPG)
+
+![ss2](https://github.com/iameo/B2N/blob/master/assets/ss/b2n_2.jpg)
+
+![ss3](https://github.com/iameo/B2N/blob/master/assets/ss/b2n_3.jpg)
+
+
+
 This hosted the sentiment analysis on the just concluded BBN show(2020). It also served as a means of "predicting" who gets evicted using a metric score(lower the positive sentiments + **magic** == possible eviction)
 
 
