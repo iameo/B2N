@@ -23,3 +23,5 @@ This project tapped from SentDex' sentiment analysis web app and was referenced 
 
 ### NB:
 I've decided to include the DBs with stored data so that could be used to fill up the web app on local server. Also, you can extract the tweets for other (NLP) projects.
+
+I MIGHT refactor later on but to run the code successfully now just use the above guide (HOW TO RUN)
